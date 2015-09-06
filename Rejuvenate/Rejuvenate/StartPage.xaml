@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Rejuvenate.StartPage" xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=Rejuvenate">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="10" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Image x:Name="logo" Source="logo.png" HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
+			<ActivityIndicator x:Name="activity" Color="Lime" IsRunning="true" Grid.Row="1" Grid.Column="0" />
+			<Label x:Name="status" Text="test text" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+			<Button x:Name="help" Text="?" Grid.Row="1" Grid.Column="3" />
+			<ProgressBar x:Name="progress" Progress="0.5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" />
+			<Button x:Name="psmplus" Text="PSM+" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+			<Button x:Name="run" Text="Run" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" />
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

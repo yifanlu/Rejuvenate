@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Rejuvenate.ConsolePage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical">
+			<StackLayout Orientation="Horizontal">
+				<ActivityIndicator x:Name="RunningIndicator" Color="Lime" IsRunning="true" HorizontalOptions="StartAndExpand" />
+				<Button x:Name="CmdButton" Text="Command" />
+				<Button x:Name="DisconnectButton" Text="Disconnect" />
+			</StackLayout>
+			<ScrollView>
+				<Label x:Name="LogText" />
+			</ScrollView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

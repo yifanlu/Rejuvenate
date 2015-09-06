@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Rejuvenate.LaunchPage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical">
+			<StackLayout Orientation="Horizontal">
+				<ActivityIndicator x:Name="RunningIndicator" Color="Lime" IsRunning="true" HorizontalOptions="StartAndExpand" />
+				<Button x:Name="DisconnectButton" Text="Disconnect" />
+			</StackLayout>
+			<ListView x:Name="HomebrewList" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

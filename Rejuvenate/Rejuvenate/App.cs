@@ -12,7 +12,7 @@ namespace Rejuvenate
         public App()
         {
             // The root page of your application
-            MainPage = new MainPage();
+            MainPage = new StartPage();
         }
 
         protected override void OnStart()

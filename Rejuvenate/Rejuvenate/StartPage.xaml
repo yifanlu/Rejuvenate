@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Rejuvenate.StartPage" xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=Rejuvenate">
-	<ContentPage.Content>
-		<Grid>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Rejuvenate.StartPage" xmlns:local="clr-namespace:Rejuvenate;assembly=Rejuvenate" xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=Rejuvenate">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 60, 20, 20"
+                Android="10, 10, 10, 10"
+                WinPhone="10, 10, 10, 10" />
+  </ContentPage.Padding>
+  <ContentPage.BindingContext>
+    <local:RejuvenateViewModel />
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+    <Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*" />
 				<RowDefinition Height="*" />
@@ -14,13 +23,13 @@
 				<ColumnDefinition Width="*" />
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
-			<Image x:Name="logo" Source="logo.png" HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
-			<ActivityIndicator x:Name="activity" Color="Lime" IsRunning="true" Grid.Row="1" Grid.Column="0" />
-			<Label x:Name="status" Text="test text" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
-			<Button x:Name="help" Text="?" Grid.Row="1" Grid.Column="3" />
-			<ProgressBar x:Name="progress" Progress="0.5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" />
-			<Button x:Name="psmplus" Text="PSM+" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
-			<Button x:Name="run" Text="Run" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" />
+			<Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" />
+			<ActivityIndicator x:Name="Activity" Color="Lime" IsRunning="{Binding IsWorking}" Grid.Row="1" Grid.Column="0" />
+			<Label x:Name="Status" Text="{Binding StatusText}" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+			<Button x:Name="Help" Text="?" Command="{Binding HelpCommand}" Grid.Row="1" Grid.Column="3" />
+			<ProgressBar x:Name="Progress" Progress="{Binding Progress}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" />
+			<Button x:Name="PsmPlus" Text="PSM+" Command="{Binding PsmPlusCommand}" BorderWidth="2" BorderRadius="15" BorderColor="Green" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+			<Button x:Name="run" Text="Run" Command="{Binding RunCommand}" BorderWidth="2" BorderRadius="15" BorderColor="Green" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" />
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

@@ -44,6 +44,7 @@
       <DependentUpon>FilesPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IPlatformTasks.cs" />
     <Compile Include="LaunchPage.xaml.cs">
       <DependentUpon>LaunchPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -53,6 +54,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rejuvenate.cs" />
+    <Compile Include="RejuvenateViewModel.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
       <SubType>Code</SubType>

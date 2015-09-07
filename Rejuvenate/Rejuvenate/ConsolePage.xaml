@@ -4,7 +4,7 @@
 		<StackLayout Orientation="Vertical">
 			<StackLayout Orientation="Horizontal">
 				<ActivityIndicator x:Name="RunningIndicator" Color="Lime" IsRunning="true" HorizontalOptions="StartAndExpand" />
-				<Button x:Name="CmdButton" Text="Command" />
+        <Button x:Name="EmailLogButton" Text="Email" />
 				<Button x:Name="DisconnectButton" Text="Disconnect" />
 			</StackLayout>
 			<ScrollView>

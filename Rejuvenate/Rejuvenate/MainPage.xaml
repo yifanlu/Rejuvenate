@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:Rejuvenate;assembly=Rejuvenate.Droid" x:Class="Rejuvenate.MainPage">
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Rejuvenate;assembly=Rejuvenate" x:Class="Rejuvenate.MainPage">
+  <TabbedPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="0, 60, 0, 0"
+                Android="0, 0, 0, 0"
+                WinPhone="0, 0, 0, 0" />
+  </TabbedPage.Padding>
 	<TabbedPage.Children>
-		<custom:LaunchPage Title="Launch" />
-		<custom:FilesPage Title="Files" />
-		<custom:ConsolePage Title="Console" />
-		<custom:SettingsPage Title="Settings" />
+		<local:LaunchPage Title="Launch" />
+		<local:FilesPage Title="Files" />
+		<local:ConsolePage Title="Console" />
+		<local:SettingsPage Title="Settings" />
 	</TabbedPage.Children>
+
 </TabbedPage>

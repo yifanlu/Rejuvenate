@@ -14,15 +14,10 @@
 							<ViewCell>
 								<Button x:Name="UpdateButton" Text="Update" />
 							</ViewCell>
-							<ViewCell>
-								<Button x:Name="EmailButton" Text="Email Log" />
-							</ViewCell>
 						</TableSection>
 						<TableSection Title="Paths">
-							<TextCell Text="Homebrew" />
-							<EntryCell x:Name="HomebrewPathEntry" Placeholder="Enter a path" Keyboard="Url" />
-							<TextCell Text="Files" />
-							<EntryCell x:Name="FilesPathEntry" Placeholder="Enter a path" Keyboard="Url" />
+							<EntryCell x:Name="AppPathEntry" Label="Apps" Placeholder="Enter a path" Keyboard="Url" />
+							<EntryCell x:Name="FilesPathEntry" Label="Files" Placeholder="Enter a path" Keyboard="Url" />
 						</TableSection>
 					</TableView.Root>
 				</TableView>
